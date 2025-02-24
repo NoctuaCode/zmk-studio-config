@@ -10,6 +10,18 @@
 #include <dt-bindings/zmk/mouse.h>
 
 / {
+  behaviors {
+        tp: tap_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_PREFERRED";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -22,10 +34,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
+&tp LA(LC(LG(LSHFT))) EQUAL  &kp SEMI  &kp COMMA  &kp DOT               &kp P        &kp Y         &kp F             &kp G     &kp C  &kp R  &kp L  &tp LA(LC(LSHFT)) SLASH
+&tp LCTRL BACKSPACE          &kp A     &kp O      &kp E                 &kp U        &kp I         &kp D             &kp H     &kp T  &kp N  &kp S  &tp LCTRL MINUS
+&kp GRAVE                    &kp APOS  &kp Q      &kp J                 &kp K        &kp X         &kp B             &kp M     &kp W  &kp V  &kp Z  &kp NON_US_BACKSLASH
+                                       &kp LALT   &tp LEFT_SHIFT SPACE  &lt 1 RET    &lt 2 ESCAPE  &tp LCTRL TAB     &kp LGUI
             >;
         };
 
@@ -38,10 +50,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &trans
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
+&bt BT_SEL 0  &kp F1       &kp F2       &kp F3        &kp F4        &kp DELETE         &trans         &kp HOME    &kp UP        &kp END     &kp PG_UP      &bt BT_CLR
+&bt BT_SEL 1  &kp F5       &kp F6       &kp F7        &kp F8        &kp PRINTSCREEN    &kp C_BRI_DEC  &kp LEFT    &kp DOWN      &kp RIGHT   &kp PAGE_DOWN  &kp C_BRIGHTNESS_INC
+&bt BT_SEL 2  &kp F9       &kp F10      &kp F11       &kp F12       &studio_unlock     &kp C_VOL_DN   &kp C_MUTE  &kp C_VOL_UP  &kp C_PREV  &kp C_PP       &kp C_NEXT
+                                        &trans        &trans        &trans             &trans         &trans      &trans
             >;
         };
 
@@ -54,10 +66,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &mkp LCLK  &trans    &mkp RCLK    &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans     &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI   &studio_unlock    &kp SPACE    &kp RET    &studio_unlock     &kp RALT
+&tp LA(LC(LG(LSHFT))) GRAVE  &kp EXCL    &kp HASH     &kp LBRC           &kp RBRC            &kp AMPS       &kp ASTERISK  &kp N7   &kp N8   &kp N9  &kp COMMA    &trans
+&tp LCTRL TILDE              &kp DOLLAR  &kp AT_SIGN  &kp LEFT_BRACKET   &kp RIGHT_BRACKET   &kp PERCENT    &kp EQUAL     &kp N4   &kp N5   &kp N6  &kp N0       &trans
+&kp PIPE                     &kp LT      &kp CARET    &kp LPAR           &kp RPAR            &kp GT         &kp PLUS      &kp N1   &kp N2   &kp N3  &kp DOT      &trans
+                                                      &trans             &trans              &trans         &trans        &trans   &trans
             >;
         };
     };
