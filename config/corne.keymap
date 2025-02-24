@@ -27,11 +27,6 @@
 
         default_layer {
             display-name = "BAS";
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
 &tp LA(LC(LG(LSHFT))) EQUAL  &kp SEMI  &kp COMMA  &kp DOT               &kp P        &kp Y         &kp F             &kp G     &kp C  &kp R  &kp L  &tp LA(LC(LSHFT)) SLASH
@@ -43,11 +38,6 @@
 
         lower_layer {
             display-name = "LOW";
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
 &bt BT_SEL 0  &kp F1       &kp F2       &kp F3        &kp F4        &kp DELETE         &trans         &kp HOME    &kp UP        &kp END     &kp PG_UP      &bt BT_CLR
@@ -59,11 +49,6 @@
 
         raise_layer {
             display-name = "RAI";
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
 &tp LA(LC(LG(LSHFT))) GRAVE  &kp EXCL    &kp HASH     &kp LBRC           &kp RBRC            &kp AMPS       &kp ASTERISK  &kp N7   &kp N8   &kp N9  &kp COMMA    &trans
