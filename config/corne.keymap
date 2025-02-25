@@ -4,13 +4,13 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 
 / {
-  behaviors {
+    behaviors {
         tp: tap_preferred {
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_PREFERRED";
@@ -27,34 +27,31 @@
 
         default_layer {
             display-name = "BAS";
-
             bindings = <
-&tp LA(LC(LG(LSHFT))) EQUAL  &kp SEMI  &kp COMMA  &kp DOT               &kp P        &kp Y         &kp F             &kp G     &kp C  &kp R  &kp L  &tp LA(LC(LSHFT)) SLASH
-&tp LCTRL BACKSPACE          &kp A     &kp O      &kp E                 &kp U        &kp I         &kp D             &kp H     &kp T  &kp N  &kp S  &tp LCTRL MINUS
-&kp GRAVE                    &kp APOS  &kp Q      &kp J                 &kp K        &kp X         &kp B             &kp M     &kp W  &kp V  &kp Z  &kp NON_US_BACKSLASH
-                                       &kp LALT   &tp LEFT_SHIFT SPACE  &lt 1 RET    &lt 2 ESCAPE  &tp LCTRL TAB     &kp LGUI
+&tp LA(LC(LG(LSHFT))) GRAVE  &kp Q  &kp W  &kp E     &kp R                 &kp T        &kp Y         &kp U          &kp I      &kp O    &kp P     &tp LA(LC(LSHFT)) SQT
+&tp LCTRL BACKSPACE          &kp A  &kp S  &kp D     &kp F                 &kp G        &kp H         &kp J          &kp K      &kp L    &kp SEMI  &tp LCTRL MINUS
+&kp EQUAL                    &kp Z  &kp X  &kp C     &kp V                 &kp B        &kp N         &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp NON_US_BACKSLASH
+                                           &kp LALT  &tp LEFT_SHIFT SPACE  &lt 1 RET    &lt 2 ESCAPE  &tp LCTRL TAB  &kp LGUI
             >;
         };
 
         lower_layer {
             display-name = "LOW";
-
             bindings = <
-&bt BT_SEL 0  &kp F1       &kp F2       &kp F3        &kp F4        &kp DELETE         &trans         &kp HOME    &kp UP        &kp END     &kp PG_UP      &bt BT_CLR
-&bt BT_SEL 1  &kp F5       &kp F6       &kp F7        &kp F8        &kp PRINTSCREEN    &kp C_BRI_DEC  &kp LEFT    &kp DOWN      &kp RIGHT   &kp PAGE_DOWN  &kp C_BRIGHTNESS_INC
-&bt BT_SEL 2  &kp F9       &kp F10      &kp F11       &kp F12       &studio_unlock     &kp C_VOL_DN   &kp C_MUTE  &kp C_VOL_UP  &kp C_PREV  &kp C_PP       &kp C_NEXT
-                                        &trans        &trans        &trans             &trans         &trans      &trans
+&bt BT_SEL 0  &kp F1  &kp F2   &kp F3   &kp F4   &kp DELETE         &trans         &kp HOME    &kp UP        &kp END     &kp PG_UP      &bt BT_CLR
+&bt BT_SEL 1  &kp F5  &kp F6   &kp F7   &kp F8   &kp PRINTSCREEN    &kp C_BRI_DEC  &kp LEFT    &kp DOWN      &kp RIGHT   &kp PAGE_DOWN  &kp C_BRIGHTNESS_INC
+&bt BT_SEL 2  &kp F9  &kp F10  &kp F11  &kp F12  &studio_unlock     &kp C_VOL_DN   &kp C_MUTE  &kp C_VOL_UP  &kp C_PREV  &kp C_PP       &kp C_NEXT
+                               &trans   &trans   &trans             &trans         &trans      &trans
             >;
         };
 
         raise_layer {
             display-name = "RAI";
-
             bindings = <
-&tp LA(LC(LG(LSHFT))) GRAVE  &kp EXCL    &kp HASH     &kp LBRC           &kp RBRC            &kp AMPS       &kp ASTERISK  &kp N7   &kp N8   &kp N9  &kp COMMA    &trans
-&tp LCTRL TILDE              &kp DOLLAR  &kp AT_SIGN  &kp LEFT_BRACKET   &kp RIGHT_BRACKET   &kp PERCENT    &kp EQUAL     &kp N4   &kp N5   &kp N6  &kp N0       &trans
-&kp PIPE                     &kp LT      &kp CARET    &kp LPAR           &kp RPAR            &kp GT         &kp PLUS      &kp N1   &kp N2   &kp N3  &kp DOT      &trans
-                                                      &trans             &trans              &trans         &trans        &trans   &trans
+&tp LA(LC(LG(LSHFT))) GRAVE  &kp EXCL    &kp HASH     &kp LBRC          &kp RBRC           &kp AMPS       &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp COMMA  &kp PERIOD
+&tp LCTRL TILDE              &kp DOLLAR  &kp AT_SIGN  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &kp N0        &kp N4  &kp N5  &kp N6  &kp EQUAL  &trans
+&kp PIPE                     &kp LT      &kp CARET    &kp LPAR          &kp RPAR           &kp GT         &kp PLUS      &kp N1  &kp N2  &kp N3  &trans     &trans
+                                                      &trans            &trans             &trans         &trans        &trans  &trans
             >;
         };
     };

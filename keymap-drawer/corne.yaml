@@ -1,41 +1,41 @@
 layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
 layers:
   BAS:
-  - {t: '=', h: Alt+Ctl+Gui+Shift}
-  - ;
-  - ','
-  - .
-  - P
-  - Y
-  - F
-  - G
-  - C
-  - R
-  - L
-  - {t: /, h: Alt+Ctl+Shift}
-  - {t: BACKSPACE, h: '$$mdi:apple-keyboard-control$$'}
-  - A
-  - O
+  - {t: '`', h: Alt+Ctl+Gui+Shift}
+  - Q
+  - W
   - E
+  - R
+  - T
+  - Y
   - U
   - I
-  - D
-  - H
-  - T
-  - N
+  - O
+  - P
+  - {t: '''', h: Alt+Ctl+Shift}
+  - {t: BACKSPACE, h: '$$mdi:apple-keyboard-control$$'}
+  - A
   - S
-  - {t: '-', h: '$$mdi:apple-keyboard-control$$'}
-  - '`'
-  - ''''
-  - Q
+  - D
+  - F
+  - G
+  - H
   - J
   - K
-  - X
-  - B
-  - M
-  - W
-  - V
+  - L
+  - ;
+  - {t: '-', h: '$$mdi:apple-keyboard-control$$'}
+  - '='
   - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
   - \
   - $$mdi:apple-keyboard-option$$
   - {t: ␣, h: LEFT SHIFT}
@@ -98,18 +98,18 @@ layers:
   - '8'
   - '9'
   - ','
-  - {t: ▽, type: trans}
+  - .
   - {t: '~', h: '$$mdi:apple-keyboard-control$$'}
   - $
   - '@'
   - '['
   - ']'
   - '%'
-  - '='
+  - '0'
   - '4'
   - '5'
   - '6'
-  - '0'
+  - '='
   - {t: ▽, type: trans}
   - '|'
   - <
@@ -121,7 +121,7 @@ layers:
   - '1'
   - '2'
   - '3'
-  - .
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
