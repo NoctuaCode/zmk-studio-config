@@ -27,7 +27,7 @@
             bindings = <
 &kp EQUAL       &kp SEMI  &kp COMMA  &kp DOT                &kp P          &kp Y        &kp F      &kp G           &kp C              &kp R  &kp L     &kp FSLH
 &mt LALT ESC    &kp A     &kp O      &kp E                  &kp U          &kp I        &kp D      &kp H           &kp T              &kp N  &kp S     &mt LALT MINUS
-&mt lGUI GRAVE  &kp SQT   &kp Q      &kp J                  &kp K          &kp X        &kp B      &kp M           &kp W              &kp V  &kp Z     &mt LGUI BSLH
+&mt LGUI GRAVE  &kp SQT   &kp Q      &kp J                  &kp K          &kp X        &kp B      &kp M           &kp W              &kp V  &kp Z     &mt LGUI BSLH
                                      &kp LG(LA(LC(LSHFT)))  &mt LSHFT SPC  &lt 1 RET    &lt 2 TAB  &mt LCTRL BSPC  &kp LA(LC(LSHFT))
             >;
         };
@@ -47,7 +47,7 @@
             bindings = <
 &kp GRAVE       &kp EXCL    &kp HASH   &kp LPAR  &kp RPAR  &kp AMPS         &kp ASTERISK  &kp 7  &kp 8  &kp 9  &kp COMMA  &trans
 &mt LALT TILDE  &kp DOLLAR  &kp AT     &kp LBKT  &kp RBKT  &kp PERCENT      &kp EQUAL     &kp 4  &kp 5  &kp 6  &kp 0      &trans
-&mt lGUI PIPE   &kp LT      &kp CARET  &kp LBRC  &kp RBRC  &kp GT           &kp PLUS      &kp 1  &kp 2  &kp 3  &kp DOT    &trans
+&mt LGUI PIPE   &kp LT      &kp CARET  &kp LBRC  &kp RBRC  &kp GT           &kp PLUS      &kp 1  &kp 2  &kp 3  &kp DOT    &trans
                                        &trans    &trans    &mt LCTRL RET    &trans  &trans  &trans
             >;
         };
